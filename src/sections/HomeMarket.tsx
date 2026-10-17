@@ -11,11 +11,11 @@ const easeSoft: [number, number, number, number] = [0.22, 0.61, 0.36, 1]
 
 const arrivalColumns = [
   [
-    { name: 'Drift Wide-Leg Cargo — Rose', price: 'RM 95', tag: 'New', src: '/products/product-04.jpg' },
+    { name: 'Field Cargo — Sand', price: 'RM 105', tag: 'New', src: '/products/product-04.jpg' },
     { name: 'Velocity Tee — Chalk', price: 'RM 49', tag: 'New', src: '/products/product-13.jpg' },
   ],
   [
-    { name: 'Drift Wide-Leg Cargo — Ash', price: 'RM 95', tag: 'New', src: '/products/product-06.jpg' },
+    { name: 'FUTURE Tee — Violet', price: 'RM 59', tag: 'New', src: '/products/product-06.jpg' },
     { name: 'Baggy Denim — Mauve', price: 'RM 119', tag: 'New', src: '/products/product-20.jpg' },
     { name: 'Override Tee — White', price: 'RM 49', tag: 'New', src: '/products/product-14.jpg' },
   ],
@@ -56,10 +56,10 @@ function ArrivalTile({
         />
         {item.tag}
       </span>
-      {/* bottom info bar */}
-      <div className="absolute inset-x-3 bottom-3 translate-y-14 rounded-xl bg-ivory/90 px-4 py-2.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-0">
-        <p className="font-display text-sm">{item.name}</p>
-        <p className="text-[11px] font-semibold text-caramel-deep">{item.price}</p>
+      {/* info bar — always visible on small screens, hover-reveal on desktop */}
+      <div className="absolute inset-x-2 bottom-2 rounded-xl bg-ivory/95 px-3 py-2.5 backdrop-blur-md transition-transform duration-500 lg:inset-x-3 lg:bottom-3 lg:translate-y-14 lg:px-4 lg:group-hover:translate-y-0">
+        <p className="font-display text-[13px] leading-snug sm:text-sm">{item.name}</p>
+        <p className="mt-0.5 whitespace-nowrap text-[12px] font-semibold text-caramel-deep">{item.price}</p>
       </div>
     </motion.div>
   )
@@ -104,8 +104,8 @@ export function NewArrivals() {
 const popular = [
   { rank: '01', name: 'Palazzo Knit — Cream', wears: 2140, src: '/products/product-01.jpg' },
   { rank: '02', name: 'Bushido Samurai Tee', wears: 1870, src: '/products/product-09.jpg' },
-  { rank: '03', name: 'Drift Wide-Leg Cargo — Rose', wears: 1520, src: '/products/product-04.jpg' },
-  { rank: '04', name: 'Baggy Denim — Indigo', wears: 1280, src: '/products/product-17.jpg' },
+  { rank: '03', name: 'Field Cargo — Sand', wears: 1520, src: '/products/product-04.jpg' },
+  { rank: '04', name: 'Baggy Denim — Mauve', wears: 1280, src: '/products/product-20.jpg' },
 ]
 
 function PopularCard({ item, index }: { item: (typeof popular)[number]; index: number }) {
@@ -164,10 +164,10 @@ function PopularCard({ item, index }: { item: (typeof popular)[number]; index: n
         >
           {item.rank}
         </motion.span>
-        {/* wear chip */}
-        <div className="absolute inset-x-3 bottom-3 translate-y-14 rounded-xl bg-ivory/90 px-4 py-2.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-0">
-          <p className="font-display text-sm">{item.name}</p>
-          <p className="text-[11px] text-olive">
+        {/* wear chip — always visible on small screens, hover-reveal on desktop */}
+        <div className="absolute inset-x-2 bottom-2 rounded-xl bg-ivory/95 px-3 py-2.5 backdrop-blur-md transition-transform duration-500 lg:inset-x-3 lg:bottom-3 lg:translate-y-14 lg:px-4 lg:group-hover:translate-y-0">
+          <p className="font-display text-[13px] leading-snug sm:text-sm">{item.name}</p>
+          <p className="mt-0.5 text-[11px] text-olive sm:text-[11px]">
             <Counter to={item.wears} suffix="+" className="font-semibold text-caramel-deep" /> wears this season
           </p>
         </div>

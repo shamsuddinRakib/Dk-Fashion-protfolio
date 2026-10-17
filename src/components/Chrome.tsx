@@ -114,14 +114,14 @@ export function Navbar() {
       transition={{ duration: 0.35, ease: [0.22, 0.61, 0.36, 1] }}
     >
       <motion.div
-        className={`mx-auto flex max-w-6xl items-center justify-between rounded-full border border-hairline px-5 py-3 transition-all duration-500 ${
+        className={`relative mx-auto grid max-w-6xl grid-cols-[2.75rem_1fr_2.75rem] items-center rounded-full border border-hairline px-3 py-3 transition-all duration-500 md:flex md:justify-between md:px-5 ${
           minimized ? 'bg-ivory/85 backdrop-blur-md shadow-soft' : 'bg-transparent'
         }`}
         animate={{ paddingTop: minimized ? 10 : 12, paddingBottom: minimized ? 10 : 12 }}
       >
         <Link
           to="/"
-          className="flex items-center transition-transform duration-300 hover:scale-[1.04]"
+          className="col-start-2 row-start-1 justify-self-center transition-transform duration-300 hover:scale-[1.04] md:justify-self-auto"
           aria-label="DK Fashion — home"
         >
           {/* generous height + negative margins: the logo's white padding is
@@ -162,7 +162,7 @@ export function Navbar() {
         </nav>
 
         <button
-          className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] md:hidden"
+          className="col-start-1 row-start-1 flex h-10 w-10 flex-col items-center justify-center gap-[5px] md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
         >

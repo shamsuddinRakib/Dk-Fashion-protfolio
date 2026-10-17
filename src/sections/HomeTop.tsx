@@ -498,14 +498,12 @@ export function Products() {
               <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 <div className="absolute -inset-y-20 left-[-30%] w-1/2 rotate-12 bg-gradient-to-r from-transparent via-ivory/25 to-transparent transition-transform duration-1000 group-hover:translate-x-[420%]" />
               </div>
-              {/* quick-view reveal */}
-              <div className="absolute inset-x-3 bottom-3 translate-y-16 rounded-xl bg-ivory/90 px-4 py-3 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-0">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-display text-sm sm:text-base">{p.name}</p>
-                    <p className="text-[11px] uppercase tracking-[0.2em] text-olive">{p.tag}</p>
-                  </div>
-                  <span className="text-sm font-semibold text-caramel-deep">{p.price}</span>
+              {/* info bar — always visible on small screens, hover-reveal on desktop */}
+              <div className="absolute inset-x-2 bottom-2 rounded-xl bg-ivory/95 px-3 py-2.5 backdrop-blur-md transition-transform duration-500 lg:inset-x-3 lg:bottom-3 lg:translate-y-16 lg:px-4 lg:py-3 lg:group-hover:translate-y-0">
+                <p className="font-display text-[13px] leading-snug sm:text-base">{p.name}</p>
+                <div className="mt-1 flex items-center justify-between gap-2">
+                  <span className="text-[10px] uppercase tracking-[0.18em] text-olive">{p.tag}</span>
+                  <span className="whitespace-nowrap text-[13px] font-semibold text-caramel-deep">{p.price}</span>
                 </div>
               </div>
             </motion.article>
