@@ -79,7 +79,10 @@ function PageChrome() {
 
 function AnnouncementWrapper() {
   return (
-    <div className="bg-moss px-4 py-2 text-center text-[11px] font-medium uppercase tracking-[0.25em] text-ivory">
+    <div
+      id="announce-bar"
+      className="bg-moss px-4 py-2 text-center text-[11px] font-medium uppercase tracking-[0.25em] text-ivory"
+    >
       E-commerce launching soon — join the notify list
     </div>
   )
