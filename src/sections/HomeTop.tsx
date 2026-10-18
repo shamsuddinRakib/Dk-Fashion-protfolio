@@ -74,7 +74,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeExpo }}
           >
-            <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-ivory/85">
+            <span className="inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.3em] text-ivory/85">
               <span className="h-1.5 w-1.5 rounded-full bg-caramel" />
               Craft-first · For him &amp; for her
             </span>
@@ -84,12 +84,12 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="font-display text-[clamp(2.75rem,9vw,7rem)] font-normal leading-[0.98] tracking-[-0.02em] text-ivory">
+          <h1 className="font-display font-extrabold text-[clamp(2.75rem,9vw,7rem)] font-normal leading-[1.2 tracking-[-0.02em] text-ivory">
             <span className="block overflow-hidden">
               {words.slice(0, 3).map((w, i) => (
                 <motion.span
                   key={w + i}
-                  className="inline-block whitespace-nowrap pr-[0.25em]"
+                  className="inline-block whitespace-nowrap pr-[0.25em] font-extrabold"
                   initial={{ y: '110%' }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.9, delay: 0.15 + i * 0.08, ease: easeExpo }}
@@ -98,9 +98,9 @@ export function Hero() {
                 </motion.span>
               ))}
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden -mt-14">
               <motion.em
-                className="inline-block italic text-caramel"
+                className="inline-block italic text-caramel font-extrabold"
                 initial={{ y: '110%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, delay: 0.42, ease: easeExpo }}
