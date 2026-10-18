@@ -84,7 +84,7 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="font-display font-extrabold text-[clamp(2.75rem,9vw,7rem)] font-normal leading-[1.2 tracking-[-0.02em] text-ivory">
+          <h1 className="font-display font-extrabold text-[clamp(2.75rem,9vw,7rem)] font-normal leading-[1.2] tracking-[-0.02em] text-ivory">
             <span className="block overflow-hidden">
               {words.slice(0, 3).map((w, i) => (
                 <motion.span
@@ -98,7 +98,7 @@ export function Hero() {
                 </motion.span>
               ))}
             </span>
-            <span className="block overflow-hidden -mt-14">
+            <span className="block overflow-hidden mt-0 md:-mt-8">
               <motion.em
                 className="inline-block italic text-caramel font-extrabold"
                 initial={{ y: '110%' }}
