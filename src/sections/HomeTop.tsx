@@ -84,9 +84,9 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="font-display font-extrabold text-[clamp(2.75rem,9vw,7rem)] font-normal leading-[1.2] tracking-[-0.02em] text-ivory">
+          <h1 className="font-display font-extrabold text-[clamp(2.75rem,9vw,7rem)] font-normal leading-[1] tracking-[-0.02em] text-ivory">
             <span className="block overflow-hidden">
-              {words.slice(0, 3).map((w, i) => (
+              {words.slice(0, 4).map((w, i) => (
                 <motion.span
                   key={w + i}
                   className="inline-block whitespace-nowrap pr-[0.25em] font-extrabold"
@@ -94,11 +94,11 @@ export function Hero() {
                   animate={{ y: 0 }}
                   transition={{ duration: 0.9, delay: 0.15 + i * 0.08, ease: easeExpo }}
                 >
-                  {w}
+                  {i === 3 ? <em className="italic text-caramel">{w}</em> : w}
                 </motion.span>
               ))}
             </span>
-            <span className="block overflow-hidden mt-0 md:-mt-8">
+            {/* <span className="block overflow-hidden mt-0 md:-mt-8">
               <motion.em
                 className="inline-block italic text-caramel font-extrabold"
                 initial={{ y: '110%' }}
@@ -107,7 +107,7 @@ export function Hero() {
               >
                 {words[3]}
               </motion.em>
-            </span>
+            </span> */}
           </h1>
 
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -122,7 +122,7 @@ export function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-wrap items-center gap-3"
+              className="flex items-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.85, duration: 0.8, ease: easeExpo }}
@@ -133,7 +133,7 @@ export function Hero() {
                   data-cursor="hover"
                   className="inline-flex items-center justify-center rounded-full bg-ivory px-7 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-moss transition-colors hover:bg-caramel hover:text-ivory"
                 >
-                  Talk to atelier
+                  Contact
                 </Link>
               </Magnetic>
               <Magnetic>
@@ -143,7 +143,7 @@ export function Hero() {
                   data-cursor="hover"
                   className="inline-flex items-center justify-center rounded-full border border-ivory/40 px-7 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ivory transition-colors hover:border-caramel hover:text-caramel"
                 >
-                  Visit collections
+                  Explore
                 </button>
               </Magnetic>
             </motion.div>
